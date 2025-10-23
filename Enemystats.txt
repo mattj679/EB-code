@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8">
+<title>enemyStats.html</title>
+<style>
+body {
+background: skyblue;
+}
+.man {
+text-align: center;
+}
+h1 {
+text-align: center;
+font-size: 48px;
+}
+h2 {
+text-align: center;
+}
+#newTitle {
+text-align: center;
+}
+.coil {
+text-align: center;
+}
+p {
+  font-size: 22px;
+  position: fixed;
+  top: 180px;
+  right: 25px;
+  border: solid white 5px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  min-width: 500px;
+}
+</style>
+<script>
+
+function start(myFirst) {
+  document.getElementById("myGame").innerHTML = myFirst;
+}
+
+function changeImage() {
+  var image = document.getElementById("imageSwitch");
+  if (image.src.match("http://www.videogamesprites.net/Earthbound/Enemies/Pogo%20Punk.gif")) {
+    image.src = "http://www.videogamesprites.net/Earthbound/Enemies/Skate%20Punk.gif";
+  } else if (image.src.match("http://www.videogamesprites.net/Earthbound/Enemies/Skate%20Punk.gif")) {
+    image.src = "http://www.videogamesprites.net/Earthbound/Enemies/Yes%20Man%20Junior.gif";
+  } else {
+    image.src = "http://www.videogamesprites.net/Earthbound/Enemies/Pogo%20Punk.gif";
+  }
+} 
+</script>
+
+<body>
+
+<h1>Enemy Stats! Beginning The Data Base!</h1>
+
+<audio controls = "controls">
+<source src = "https://starmen.net/mother2/music/032-%20Earthbound%20-%20Battle%20Against%20a%20Weak%20Opponent.mp3" type = "audio/mpeg">
+</audio>
+
+<h2>Suburbs of Onett</h2>
+
+<div class = "man">
+
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/MapEnemies/Coil%20Snake%20(Front).gif"
+       onclick = "start('<b>Coil Snake</b> <br> HP: 18 <br>Offense: 3 <br> Defense: 4 <br> Speed: 2 <br> exp: 1')" />
+
+<input type = image 
+       value src = "http://www.videogamesprites.net/Earthbound/MapEnemies/Spiteful%20Crow.gif"
+       onclick = "start('<b>Spiteful Crow</b> <br> HP: 24 <br>Offense: 5 <br> Defense: 3 <br> Speed: 77 <br> exp: 3')" />
+
+<input type = image 
+       value src = "http://www.videogamesprites.net/Earthbound/MapEnemies/Runaway%20Dog%20(Front).gif"
+       onclick = "start('<b>Runaway Dog</b> <br> HP: 21 <br>Offense: 4 <br> Defense: 5 <br> Speed: 26 <br> exp: 4')" /> 
+
+<p id = "myGame">
+
+
+</div>
+
+<div class = "man">
+
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/Enemies/Coil%20Snake.gif"
+       onclick = "start('<b>Coil Snake</b> <br> HP: 18 <br> Offense: 3 <br> Defense: 4 <br> Speed: 2 <br> exp: 1')" />
+
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/Enemies/Spiteful%20Crow.gif"
+       onclick = "start('<b>Spiteful Crow</b> <br> HP: 24 <br> Offense: 5 <br> Defense: 3 <br> Speed: 77 <br> exp: 3')" />
+
+<input type = image 
+       value src = "http://www.videogamesprites.net/Earthbound/Enemies/Runaway%20Dog.gif"
+       onclick = "start('<b>Runaway Dog</b> <br> HP: 21 <br> Offense: 4 <br> Defense: 5 <br> Speed: 26 <br> exp: 4')" /> 
+</div>
+
+<audio controls = "controls">
+<source src = "https://starmen.net/mother2/music/034-%20Earthbound%20-%20Battle%20Against%20a%20Mobile%20Opponent.mp3" type = "audio/mpeg">
+</audio>
+
+<h2>Onett</h2>
+
+<div class = "man">
+
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/NPCs/Individuals/Onett/Shark%20(Front).gif"
+       onclick = "start('<b>Pogo Punk</b> <br> HP: 35 <br> Offense: 8 <br> Defense: 10 <br> Speed: 3 <br> exp: 15')" />
+
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/NPCs/Individuals/Onett/Shark%20(Front).gif"
+       onclick = "start('<b>Skate Punk</b> <br> HP: 31 <br> Offense: 7 <br> Defense: 8 <br> Speed: 5 <br> exp: 12')" />
+
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/NPCs/Individuals/Onett/Shark%20(Front).gif" 
+       onclick = "start('<b>Yes Man Junior</b> <br> HP: 33 <br> Offense: 8 <br> Defense: 9 <br> Speed: 4 <br> exp: 13')" />
+</div>
+
+<div class = "man">
+
+<img id = "imageSwitch" onclick = "changeImage()" src = "http://www.videogamesprites.net/Earthbound/Enemies/Pogo%20Punk.gif">
+
+</div>
+
+<audio controls = "controls">
+<source src = "https://starmen.net/mother2/music/033-%20Earthbound%20-%20Battle%20Against%20a%20Weird%20Opponent.mp3" type = "audio/mpeg">
+</audio>
+
+<h2 id = "newTitle">The Giant Step</h2>
+
+<div class = "man">
+
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/MapEnemies/Rowdy%20Mouse%20(Front).gif"
+       onclick = "start('<b>Rowdy Mouse</b> <br> HP: 36 <br> Offense: 7 <br> Defense: 20 <br> Speed: 5 <br> exp: 34')" />
+
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/MapEnemies/Attack%20Slug.gif"
+       onclick = "start('<b>Attack Slug</b> <br> HP: 30 <br> Offense: 9 <br> Defense: 2 <br> Speed: 1 <br> exp: 27')" />
+
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/MapEnemies/Black%20Antoid.gif"
+       onclick = "start('<b>Black Antoid</b> <br> HP: 34 <br> Offense: 14 <br> Defense: 13 <br> Speed: 4 <br> exp: 37')" />
+
+</div>
+
+<div class = "man">
+
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/Enemies/Rowdy%20Mouse.gif"
+       onclick = "start('<b>Rowdy Mouse</b> <br> HP: 36 <br> Offense: 7 <br> Defense: 20 <br> Speed: 5 <br> exp: 34')" />
+
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/Enemies/Attack%20Slug.gif"
+       onclick = "start('<b>Attack Slug</b> <br> HP: 30 <br> Offense: 9 <br> Defense: 2 <br> Speed: 1 <br> exp: 27')" />
+
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/Enemies/Black%20Antoid.gif"
+       onclick = "start('<b>Black Antoid</b> <br> HP: 34 <br> Offense: 14 <br> Defense: 13 <br> Speed: 4 <br> exp: 37')" />
+
+</div>
+
+<audio controls = "controls">
+<source src = "https://starmen.net/mother2/music/119-%20Earthbound%20-%20Battle%20Against%20a%20Machine.mp3">
+</audio>
+
+<h2>Peaceful Rest Valley</h2>
+
+<div class = "man">
+
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/MapEnemies/Li'l%20UFO.gif"
+       onclick = "start('<b>Li\'l UFO</b> <br>  HP: 82 <br> Offense: 18 <br> Defense: 17 <br> Speed: 53 <br> exp: 233')" />
+
+<input type = image 
+              value src = "http://www.videogamesprites.net/Earthbound/MapEnemies/Hyper%20Spinning%20Robo.gif"
+              onclick = "start('<b>Spinning Robo</b> <br>  HP: 113 <br> Offense: 21 <br> Defense: 22 <br> Speed: 7 <br> exp: 297')" />
+
+
+<div class = "man">
+
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/Enemies/Li'l%20UFO.gif"
+       onclick = "start('<b>Li\'l UFO</b> <br>  HP: 82 <br> Offense: 18 <br> Defense: 17 <br> Speed: 53 <br> exp: 233')" />
+
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/Enemies/Spinning%20Robo.gif" 
+       onclick = "start('<b>Spinning Robo</b> <br>  HP: 113 <br> Offense: 21 <br> Defense: 22 <br> Speed: 7 <br> exp: 297')" />
+
+</div>
