@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8">
+<title>boxTest.html</title>
+<style>
+.center {
+  text-align: center;
+  cursor: pointer;
+} 
+p {
+  font-size: 22px;
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  border: solid white 5px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  min-width: 500px;
+}
+.EB {
+  text-align: center;
+}
+.man {
+  text-align: center;
+}
+body {
+  background: skyblue;
+}
+h1 {
+  text-align: center;
+  font-size: 39px;
+}
+h2 {
+  text-align: center;
+}
+</style>
+<script>
+
+function start(second) {
+    document.getElementById("boxFirst").innerHTML = second;
+}
+
+function changeImage() {
+  var image = document.getElementById("myImage");
+  if (image.src.match("https://starmen.net/reidman/rsssssnos/earthbnd/icons/opnprsnt.gif")) {
+    image.src = "https://starmen.net/reidman/rsssssnos/earthbnd/icons/present.gif";
+  } else {
+    image.src = "https://starmen.net/reidman/rsssssnos/earthbnd/icons/opnprsnt.gif";
+    start('Ness opened present! <br> Birthday Cake was inside! Ness takes it.');
+  }
+}
+
+</script>
+
+<audio controls = "controls">
+<source src = "https://starmen.net/mother2/music/006-%20Earthbound%20-%20Choose%20a%20File.mp3" type = "audio/mpeg">
+</audio>
+
+
+</head>
+<body>
+
+<h1>Happy 30th EarthBound!</h1>
+
+<p id = "boxFirst"></p>
+
+<div class = "EB">
+<input type = image
+       value src = "https://www.pikpng.com/pngl/b/228-2285717_ness-peace-earthbound-ness-clipart.png" alt="first" style="width:32px;height:48px;"
+       onclick = "start('Hey Thanks!')" />
+
+<input type = image
+       value src = "https://starmen.net/reidman/rsssssnos/earthbnd/icons/paula.gif" alt="second" style="width:32px;height:48px;"
+       onclick = "start('Hello')" />
+
+<input type = image
+       value src = "https://starmen.net/reidman/rsssssnos/earthbnd/icons/jeff.gif" alt="third" style="width:32px;height:48px;"
+       onclick = "start('Hi')" />
+
+<input type = image
+       value src = "https://starmen.net/reidman/rsssssnos/earthbnd/icons/poo.gif" alt="fourth" style="width:32px;height:48px;"
+       onclick = "start('Yo')" />
+</div>
+
+
+<div class = "center">
+<img id="myImage" onclick="changeImage()" src = "https://starmen.net/reidman/rsssssnos/earthbnd/icons/present.gif">
+
+</div>
+
+
+<h2>Onett Police</h2>
+
+<div class = "man">
+<input type = image
+       value src = "https://www.videogamesprites.net/Earthbound/NPCs/Townsfolk/Men/Cop%20(Front).gif" style="width:32;height:48;"
+       onclick = "start('&quot;Your average policeman is stronger than any <br> super hero!&quot;')" />
+
+<input type = image
+       value src = "https://www.videogamesprites.net/Earthbound/NPCs/Individuals/Onett/Captain%20Strong%20(Front).gif" style="width:32;height:48;"
+       onclick = "start('&quot;At times like this, kids like you should be <br> playing Nintendo games.&quot;')" />
+</div>
+
+<h2>Twoson: Everdred</h2>
+
+<div class = "man">
+<input type = image
+       value src = "https://www.videogamesprites.net/Earthbound/NPCs/Individuals/Twoson/Everdred%20(Front).gif" alt="everdread" style="width:32px;height:48px;""
+       onclick = "start('&quot;Wah ha ha ha! Why don\'t we chat later-after <br> we\'ve locked horns!&quot;')" />
+</div>
+
+<h2>Happy Happy Village</h2>
+
+<div class = "man">
+<input type = image
+       value src = "https://www.videogamesprites.net/Earthbound/NPCs/Townsfolk/Men/Man8%20(Front).gif" alt="party man" style="width:32px;height:48px;"
+       onclick = "start('&quot;My wife has run away for a second time. I\'m <br> such a lucky man!&quot;')" />
+</div>
+
+<h2>Threed Tent: Zombie Relief Corps</h2>
+
+<div class = "man">
+<input type = image
+       value src = "https://www.videogamesprites.net/Earthbound/NPCs/Townsfolk/Men/Musclehead%20(Front).gif" alt="cool guy" style="width:32px;height:48px;"
+       onclick = "start('&quotZombie Paper really works, so I hope someone <br> comes up with Pretty Girl Paper. Oops, that wasn\'t <br> a nice thing to say.&quot')" />
+</div>
+
+<h2>Winters: Dr. Andonuts</h2>
+
+<div class = "man">
+<input type = image
+       value src = "http://www.videogamesprites.net/Earthbound/NPCs/Individuals/Winters/Dr%20Andonuts%20(Front).gif"
+       onclick = "start('&quotLet\'s get together again in 10 years or so.&quot')" />
+</div>
+
+<h2>Fourside: Monotoli Building</h2>
+
+<div class = "man">
+<input type = image
+       value src = "https://www.videogamesprites.net/Earthbound/NPCs/Townsfolk/Men/Man3%20(Front).gif" alt="suit guy" style="width:32px;height:48px;"
+       onclick = "start('&quot;Last night there was a solitaire tournament. <br> ...I lost my shirt....&quot;')" />
+</div>
+
+<h2>Fourside: Everdred</h2>
+
+<div class = "man">
+<input type = image
+       value src = "https://www.videogamesprites.net/Earthbound/NPCs/Individuals/Twoson/Everdred%20-%20Lie.gif" alt="everdread"       
+       onclick = "start('&quot;When on your way out<br>Be sure that you say goodbye<br>Then lock the door tight.&quot;<br>~haiku')" />
+</div>
+
+<h2>Stoic Club members</h2>
+
+<div class = "man">
+<input type = image
+       value src = "https://www.videogamesprites.net/Earthbound/NPCs/Individuals/Winters/Maxwell%20(Front).gif" alt="man" style="width:32px;height:48px;"
+       onclick = "start('&quot;Didactically speaking, seminal evidence seems to <br> explicate the fact that your repudiation of entropy <br> supports my theory of space-time synthesis.&quot;')" />
+
+<input type = image
+       value src = "https://www.videogamesprites.net/Earthbound/NPCs/Townsfolk/Men/Man2%20(Front).gif"
+       onclick = "start('&quot;You guys can\'t envision the final collapse of <br> capitalism? Incredible!&quot;')" />
+
+</div>
+
+<h2>Summers' sailor</h2>
+
+<div class = "man">
+<input type = image
+       value src = "https://www.videogamesprites.net/Earthbound/NPCs/Individuals/Summers/Sea%20Captain%20(Front).gif"
+       onclick = "start('&quot;It could only cost you your life, and you got that <br> for free!&quot;')" />
+</div>
+
+
+
+</body>
+</html>
