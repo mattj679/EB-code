@@ -72,10 +72,15 @@
     // the => is called fat arrow and used in function definition
     // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
     enemies.forEach((enemy) => {
+      // create image element
       const enemyImageElement = document.createElement('img');
+      // the src is the image url from the enemy object
       enemyImageElement.src = enemy.imageUrl;
+      // create paragraph element
       const enemyParagraphElement = document.createElement('p');
+      // append the image inside the paragraph
       enemyParagraphElement.appendChild(enemyImageElement)
+      // append the paragraph to the enemy-list div
       enemyList.appendChild(enemyParagraphElement);
     });
   });
