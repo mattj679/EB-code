@@ -1,72 +1,105 @@
 <!DOCTYPE html>
 <html lang = "en">
-<head>
-<meta charset = "UTF-8">
-<title>ifElse.html</title>
-<style>
-body {
-background: skyblue;
-}
-h1 {
- text-align: center;
-}
-p {
- font-size: 22px;
- position: fixed;
- top: 90px;
- right: 150px;
- border: solid white 5px;
- background-color: black;
- color: white;
- border-radius: 5px;
- display: flex;
- flex-direction: column;
- min-height: 300px;
- min-width: 500px;
- text-align: center;
-}
-</style>
-<body>
-  <h1>If and Else If Demo <br> Featuring an EarthBound Database!</h1>
+  <head>
+    <meta charset = "UTF-8">
+    <title>ifElse.html</title>
+    <style>
+      body {
+        background: skyblue;
+      }
+      h1 {
+        text-align: center;
+      }
+      #lblOutput {
+        font-size: 22px;
+        position: fixed;
+        top: 90px;
+        right: 150px;
+        border: solid white 5px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        min-height: 300px;
+        min-width: 500px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>If and Else If Demo <br> Featuring an EarthBound Database!</h1>
+    <label>Enter enemy's name:</label>
+    <input type = "text"
+          id = "txtInput"
+          value = "" />
+    <button type = "button"
+            onclick = "checkName()">
+      Search
+    </button>
+    <div id="enemy-list">
 
-    
-        <label>Enter enemy's name:</label>
-        <input type = "text"
-               id = "txtInput"
-               value = "" />
-<button type = "button"
-        onclick = "checkName()">
-  Search
-</button>
+    </div>
 
-<p id = "lblOutput">Watch this space</p>
+    <p id = "lblOutput">Watch this space</p>
 
-
-</body>
+  </body>
 </html>
 
-
 <script type = "text/javascript">
-function checkName() {
-  // from ifElse.html
-  lblOutput = document.getElementById("lblOutput");
-  txtInput = document.getElementById("txtInput");
+  // the enemies variable is an array of objects that represents all the enemies in our database
+  // each object represents one enemy
+  // each object has two properties: name and imageUrl
+  // the enemies array isn't fully populated and only has a couple entries for demo purposes
+  const enemies = [
+    {
+      name: "Coil Snake",
+      imageUrl: "https://static.wikia.nocookie.net/earthbound/images/f/f8/Coil_Snake_clay_model.png"
+    },
+    {
+      name: "Spiteful Crow",
+      imageUrl: "https://static.wikia.nocookie.net/earthbound/images/6/60/Spiteful_Crow_clay_model.png"
+    },
+  ];
 
-  userName = txtInput.value;
-  if (userName == "Coil Snake") {
-    lblOutput.innerHTML = "<b>Coil Snake</b> <br> HP: 18 <br> Offense: 3 <br> Defense: 4 <br> Speed: 2 <br> exp: 1";
-  } else if (userName == "Spiteful Crow") {
-    lblOutput.innerHTML = "<b>Spiteful Crow</b> <br> HP: 24 <br> Offense: 5 <br> Defense: 3 <br> Speed: 77 <br> exp: 3";
-  } else if (userName == "Runaway Dog") {
-    lblOutput.innerHTML = "<b>Runaway Dog</b> <br> HP: 21 <br> Offense: 4 <br> Defense: 5 <br> Speed: 26 <br> exp: 4";
-  } else if (userName == "Pogo Punk") {
-    lblOutput.innerHTML = "<b>Pogo Punk</b> <br> HP: 35 <br> Offense: 8 <br> Defense: 10 <br> Speed: 3 <br> exp: 15";
-  } else if (userName == "Skate Punk") {
-    lblOutput.innerHTML = "<b>Skate Punk</b> <br> HP: 31 <br> Offense: 7 <br> Defense: 8 <br> Speed: 5 <br> exp: 12";
-  } else if (userName == "Yes Man Junior") {
-    lblOutput.innerHTML = "<b>Yes Man Junior</b> <br> HP: 33 <br> Offense: 8 <br> Defense: 9 <br> Speed: 4 <br> exp: 13";
-  } else {
-    lblOutput.innerHTML = "Hey there, buddy!";
-  } // end if
-} // end function
+  // this code executes when the page is finished loading
+  // this ensures that the HTML in the page exists
+  // without this, there are situations where the javascript won't work as expected
+  document.addEventListener("DOMContentLoaded", function() {
+    // Code to be executed once the DOM is ready
+    const enemyList = document.getElementById('enemy-list');
+    // iterate through each enemy
+    // the => is called fat arrow and used in function definition
+    // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+    enemies.forEach((enemy) => {
+      const enemyImageElement = document.createElement('img');
+      enemyImageElement.src = enemy.imageUrl;
+      const enemyParagraphElement = document.createElement('p');
+      enemyParagraphElement.appendChild(enemyImageElement)
+      enemyList.appendChild(enemyParagraphElement);
+    });
+  });
+
+  function checkName() {
+    // from ifElse.html
+    lblOutput = document.getElementById("lblOutput");
+    txtInput = document.getElementById("txtInput");
+
+    userName = txtInput.value;
+    if (userName == "Coil Snake") {
+      lblOutput.innerHTML = "<b>Coil Snake</b> <br> HP: 18 <br> Offense: 3 <br> Defense: 4 <br> Speed: 2 <br> exp: 1";
+    } else if (userName == "Spiteful Crow") {
+      lblOutput.innerHTML = "<b>Spiteful Crow</b> <br> HP: 24 <br> Offense: 5 <br> Defense: 3 <br> Speed: 77 <br> exp: 3";
+    } else if (userName == "Runaway Dog") {
+      lblOutput.innerHTML = "<b>Runaway Dog</b> <br> HP: 21 <br> Offense: 4 <br> Defense: 5 <br> Speed: 26 <br> exp: 4";
+    } else if (userName == "Pogo Punk") {
+      lblOutput.innerHTML = "<b>Pogo Punk</b> <br> HP: 35 <br> Offense: 8 <br> Defense: 10 <br> Speed: 3 <br> exp: 15";
+    } else if (userName == "Skate Punk") {
+      lblOutput.innerHTML = "<b>Skate Punk</b> <br> HP: 31 <br> Offense: 7 <br> Defense: 8 <br> Speed: 5 <br> exp: 12";
+    } else if (userName == "Yes Man Junior") {
+      lblOutput.innerHTML = "<b>Yes Man Junior</b> <br> HP: 33 <br> Offense: 8 <br> Defense: 9 <br> Speed: 4 <br> exp: 13";
+    } else {
+      lblOutput.innerHTML = "Hey there, buddy!";
+    } // end if
+  } // end function
 </script>
